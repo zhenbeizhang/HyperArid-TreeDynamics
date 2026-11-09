@@ -3,12 +3,14 @@ import torch
 
 
 def counts(probabilities, target, threshold):
+    """Return integer counts in TP, FP, FN, TN order using a strict threshold."""
     pred, ref = probabilities > threshold, target > 0.5
     return torch.tensor([torch.sum(pred & ref), torch.sum(pred & ~ref),
                          torch.sum(~pred & ref), torch.sum(~pred & ~ref)], dtype=torch.int64)
 
 
 def metrics(c):
+    """Convert pooled counts to ratios; zero denominators become JSON null."""
     tp, fp, fn, tn = [int(v) for v in c]
     div = lambda a, b: a/b if b else None
     return dict(tp=tp, fp=fp, fn=fn, tn=tn, precision=div(tp,tp+fp), recall=div(tp,tp+fn),

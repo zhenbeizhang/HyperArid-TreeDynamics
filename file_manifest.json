@@ -76,13 +76,13 @@
   },
   {
     "file": "datasets/augment.py",
-    "bytes": 1117,
-    "sha256": "c92f1b20d6ff3f1071b70c63673fc9153ca0397c1ccda090c71e671714ef7c37"
+    "bytes": 1280,
+    "sha256": "d6906fc2389b0a03ea842b3985935c88ae839280f9a9ecae94467b081b27d8aa"
   },
   {
     "file": "datasets/tree_dataset.py",
-    "bytes": 5746,
-    "sha256": "adde1795c0f1d851c5651eb9d1afdd7e7d13768eb78d394df0c30244d5d760ce"
+    "bytes": 6559,
+    "sha256": "dee73009198421e82300fecd94c82357465890bca0c645a93c58eab700f9c8bd"
   },
   {
     "file": "docs/CODE_GUIDE.md",
@@ -106,8 +106,8 @@
   },
   {
     "file": "docs/TRAINING.md",
-    "bytes": 5250,
-    "sha256": "35b0507aa43a761f84957d90edf584ca8f99ffab8f75be6683659eb6abdd61c4"
+    "bytes": 5530,
+    "sha256": "78a897538f244a02767b4cb922ee078ec04dbe2392d0437ecdb783574a80519c"
   },
   {
     "file": "docs/VALIDATION.md",
@@ -116,8 +116,8 @@
   },
   {
     "file": "evaluate.py",
-    "bytes": 1760,
-    "sha256": "45ce8ae2869c9bc11f9e22a3646de3e3dbd563e7fc1b89cf330ce5d51d363386"
+    "bytes": 1845,
+    "sha256": "4827762b536c869fe31e881b092bb425e2eb4ad37a4e0136dccb4eda7baa2e1b"
   },
   {
     "file": "LICENSE.txt",
@@ -131,8 +131,8 @@
   },
   {
     "file": "losses/bce_tversky.py",
-    "bytes": 1494,
-    "sha256": "861129b1d9f10f939a91fc3c5e58fbbc722eb178a35d79d3cf24868a88f3fe7d"
+    "bytes": 1908,
+    "sha256": "ec120a4fe03838732f06b2f6838e1b8916f488c227f31995bb2cb941ae32865e"
   },
   {
     "file": "models/__init__.py",
@@ -146,13 +146,13 @@
   },
   {
     "file": "models/unet.py",
-    "bytes": 7670,
-    "sha256": "d3fde408eb6488d1ed2c716f5432337d4fbe553347fa61e77aee2b7dae6a2a85"
+    "bytes": 9094,
+    "sha256": "2bc154db19606d0745958c44971044758866925d8701dd4b11ac4825aa68059d"
   },
   {
     "file": "predict.py",
-    "bytes": 2134,
-    "sha256": "fa74472c430153d7cc36239f71b43d7a8025a2c6594aa3613613b746ebe1c076"
+    "bytes": 2301,
+    "sha256": "ad379a478523af191b168e163d50315e9baebd76fc404eea8b37fe1cfe01703f"
   },
   {
     "file": "README.md",
@@ -296,8 +296,8 @@
   },
   {
     "file": "scripts/prepare_splits.py",
-    "bytes": 3084,
-    "sha256": "9590e8e41cb5387f1e4c441f04758eb267ce7f2ecc320809ef72b81450a5d6ad"
+    "bytes": 3256,
+    "sha256": "6ecf4ceb5651d7914585ff4bdd26279a3ae1b9bec8bba4a45103d241541b9d63"
   },
   {
     "file": "scripts/smoke_training.py",
@@ -311,8 +311,8 @@
   },
   {
     "file": "train.py",
-    "bytes": 7300,
-    "sha256": "8de8ee84d3a9b4dce9a0742f01c53afe18a04c4bf4591c1fa1193dcbc4e620ae"
+    "bytes": 7808,
+    "sha256": "9f86bf9a90a4f639cfa070a304642e28e69392a6647929fec87afb236eba88f3"
   },
   {
     "file": "training/__init__.py",
@@ -321,13 +321,13 @@
   },
   {
     "file": "training/common.py",
-    "bytes": 2599,
-    "sha256": "2be7d84c06d1b0e9cdb02a90b50750271b7e893d644d21b0318d4de01274f7c3"
+    "bytes": 2858,
+    "sha256": "da7ed76958f555ba7c55abedd2e2555171c6bedfaba7ce3248b5b4945335a122"
   },
   {
     "file": "training/metrics.py",
-    "bytes": 646,
-    "sha256": "1d053621c036c8242a29b2eb5e5862ffa362297fe878b32b295a7c532c642d8d"
+    "bytes": 807,
+    "sha256": "d97b09216a84f9f45c7d00c2665d3e9824b5329e72d23042701f46273604c4bd"
   },
   {
     "file": "tree_dynamics/__init__.py",
@@ -371,8 +371,8 @@
   },
   {
     "file": "tree_dynamics/object_metrics.py",
-    "bytes": 3195,
-    "sha256": "0d3cd18d59f8594fe111e620ff72be9087cac7bfc9eabc7c3d9cc333056f0de3"
+    "bytes": 3537,
+    "sha256": "ec7562fd3bc709fbde3f3c9ffefde104763cf09ca7658aa475e99274fffc723a"
   },
   {
     "file": "tree_dynamics/photometric.py",
@@ -381,8 +381,8 @@
   },
   {
     "file": "tree_dynamics/preprocessing.py",
-    "bytes": 884,
-    "sha256": "247b9a543bd6ffcc411d0841ab413b3a8229eed938b8fe0acffb4933b26db4cc"
+    "bytes": 1269,
+    "sha256": "748357ce70175c76a614cf147ff64844134db1e418cf33cad259c3f5a51afca8"
   },
   {
     "file": "tree_dynamics/summaries.py",

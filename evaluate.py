@@ -21,6 +21,7 @@ def main():
     cfg = saved['config']
     seed_all(cfg['seed'], cfg['threads'])
     audit = validate_splits(a.data_root, {'test':a.manifest}, cfg['bands'])
+    # Match the reserved membership and file hashes; reject substituted test inputs.
     expected = [row for row in saved['input_audit'] if row['split']=='test']
     if audit != expected:
         raise ValueError('This command requires the unchanged test manifest and files reserved by the training run.')

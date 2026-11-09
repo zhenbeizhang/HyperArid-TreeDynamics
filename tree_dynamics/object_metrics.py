@@ -1,14 +1,18 @@
 import numpy as np
 from scipy import ndimage
 from scipy.optimize import linear_sum_assignment
+
+# Evaluate the central 100 m x 100 m area inside a 128 m tile at 0.5 m spacing.
 CORE=np.zeros((256,256),bool)
 CORE[28:228,28:228]=True
 
 def components(mask):
+    """Label foreground objects using SciPy's default 2-D four-neighbour connectivity."""
     lab, n = ndimage.label(mask)
     return [lab == i for i in range(1, n + 1)]
 
 def selected(items):
+    """Keep 3 <= area < 200 m2 components whose centroid lies in the central core."""
     out = []
     edge_core = 0
     for original_id, m in enumerate(items, 1):
@@ -28,6 +32,7 @@ def match_matrix(ious, threshold):
     if not ious.size:
         return []
     valid = ious >= threshold
+    # The fractional IoU bonus breaks ties without outweighing one valid match.
     cost = valid.astype(float) * (1 + ious / (min(ious.shape) + 1))
     rr, cc = linear_sum_assignment(cost, maximize=True)
     return [(int(r), int(c), float(ious[r, c])) for r, c in zip(rr, cc) if valid[r, c]]

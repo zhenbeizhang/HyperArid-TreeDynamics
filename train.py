@@ -17,6 +17,7 @@ from training.metrics import counts, metrics
 
 
 def evaluate_loader(model, loader, device, criterion, threshold):
+    """Evaluate without gradients and pool pixel counts before computing ratios."""
     model.eval()
     confusion = torch.zeros(4, dtype=torch.int64)
     total_loss = 0.0
@@ -57,12 +58,14 @@ def main():
     root = Path(__file__).parent
     source_files = [Path('train.py'), Path('models/unet.py'), Path('tree_dynamics/preprocessing.py')]
     source_files += [p.relative_to(root) for folder in ['datasets','losses','training'] for p in (root/folder).glob('*.py')]
+    # Exact source hashes make resume checks sensitive even to comment-only edits.
     source_hashes = {p.as_posix(): digest(root/p) for p in sorted(source_files)}
     train_set = TreeDataset(args.data_root, manifests['train'], cfg['bands'], Augment(cfg['augmentation']))
     val_set = TreeDataset(args.data_root, manifests['val'], cfg['bands'])
     model = unet(n_channels=5).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=cfg['learning_rate'], weight_decay=cfg['weight_decay'])
     criterion = BCETverskyLoss(**cfg['loss'])
+    # A negative initial best score ensures the first checkpoint is retained at IoU=0.
     start, best, history = 0, -1.0, []
     if args.resume:
         model, saved = load_checkpoint(args.resume, device)
@@ -87,6 +90,7 @@ def main():
     stop = args.stop_after_epoch or cfg['epochs']
     if start >= stop:
         raise ValueError('No remaining epochs at the requested stopping point.')
+    # Epoch-specific seeds let an interrupted epoch restart from its saved boundary.
     for epoch in range(start, stop):
         seed_all(cfg['seed']+epoch, cfg['threads'])
         generator = torch.Generator().manual_seed(cfg['seed']+epoch)
@@ -102,6 +106,7 @@ def main():
             loss.backward()
             optimizer.step()
             total += loss.item()*len(x)
+        # Select on validation IoU only; held-out test evaluation is a separate command.
         validation = evaluate_loader(model, val_loader, device, criterion, cfg['threshold'])
         score = validation['iou'] if validation['iou'] is not None else 0.0
         improved = score > best
@@ -111,6 +116,7 @@ def main():
         saved = {'format':'hyperarid-training-v1', 'model':model.state_dict(), 'optimizer':optimizer.state_dict(),
                  'epoch':epoch, 'best_iou':best, 'config':cfg, 'input_audit':audit, 'source_hashes':source_hashes,
                  'history':history, 'device':str(device)}
+        # Replace the last checkpoint only after its new file is fully written.
         temporary = args.output/'last.pth.tmp'
         torch.save(saved, temporary)
         temporary.replace(args.output/'last.pth')

@@ -1,3 +1,8 @@
+"""Tree-crown U-Net with spatial attention and gated encoder skip features.
+
+Inputs use NCHW layout; the training entry supplies RGB, NIR and NDVI channels.
+The output contains per-pixel probabilities, not logits.
+"""
 import torch
 import torch.nn as nn
 import numpy as np
@@ -42,12 +47,17 @@ class Up(nn.Module):
         x1 = self.up(x1)
         diff_y = x2.size()[2] - x1.size()[2]
         diff_x = x2.size()[3] - x1.size()[3]
+        # Match the skip grid before concatenation, including odd-size differences.
         x1 = nn.functional.pad(x1, [diff_x // 2, diff_x - diff_x // 2, diff_y // 2, diff_y - diff_y // 2])
         x = torch.cat([x2, x1], dim=1)
         return self.conv(x)
 
 class MorphoAttention(nn.Module):
-    """形态学特征增强的空间注意力模块（保持原有实现不变）"""
+    """Reweight features using two convolutional branches and a spatial gate.
+
+    The branch names describe the design analogy; both branches are learned
+    convolutions, not explicit max/min morphological dilation and erosion.
+    """
 
     def __init__(self, in_channels, reduction_ratio=4):
         super().__init__()
@@ -61,6 +71,7 @@ class MorphoAttention(nn.Module):
         compressed = self.channel_pool(x)
         dilation_map = self.dilation_conv(compressed)
         erosion_map = self.erosion_conv(compressed)
+        # Contrast the dilated and standard convolution responses at each pixel.
         boundary = dilation_map - erosion_map
         boundary = self.edge_conv(boundary)
         fused = self.fusion(torch.cat([boundary, dilation_map], dim=1))
@@ -68,13 +79,15 @@ class MorphoAttention(nn.Module):
         return x * spatial_att
 
 class DirectionCentralityModule(nn.Module):
-    """模拟CDC的局部方向中心性计算，增强边界特征"""
+    """Produce a spatial gate from variance across eight learned responses."""
 
     def __init__(self, in_channels, k=8):
         super().__init__()
         self.k = k
         self.conv = nn.Sequential(nn.Conv2d(in_channels, in_channels // 4, 3, padding=1), nn.GroupNorm(4, in_channels // 4), nn.ReLU())
         self.direction_conv = nn.Conv2d(in_channels // 4, 8, kernel_size=3, padding=1, groups=8)
+        # Seed the first input slice of each output kernel; weights remain trainable.
+        # The response count is fixed at eight in this checkpoint architecture.
         nn.init.constant_(self.direction_conv.weight, 0)
         for i in range(8):
             self.direction_conv.weight.data[i, 0] = torch.tensor([[np.cos(i * np.pi / 4), 0, -np.cos(i * np.pi / 4)], [0, 0, 0], [-np.cos(i * np.pi / 4), 0, np.cos(i * np.pi / 4)]])
@@ -83,11 +96,12 @@ class DirectionCentralityModule(nn.Module):
         x = self.conv(x)
         direction_responses = self.direction_conv(x)
         mean_response = direction_responses.mean(dim=1, keepdim=True)
+        # Reduce across response channels, preserving the spatial dimensions.
         variance = torch.mean((direction_responses - mean_response) ** 2, dim=1, keepdim=True)
         return torch.sigmoid(variance)
 
 class AttentionGate(nn.Module):
-    """独立的门控机制模块，用于解码器中处理编码器特征"""
+    """Use decoder features to gate the corresponding encoder skip features."""
 
     def __init__(self, gate_channels, input_channels, inter_channels=None):
         super().__init__()
@@ -107,6 +121,12 @@ class AttentionGate(nn.Module):
         return input * psi
 
 class UNet(nn.Module):
+    """Encode four spatial scales and decode through attention-gated skips.
+
+    Input: (batch, n_channels, height, width).
+    Output: (batch, n_classes, height, width), with values in [0, 1].
+    The binary training recipe uses n_channels=5 and n_classes=1.
+    """
 
     def __init__(self, n_channels=3, n_classes=1, bilinear=True):
         super(UNet, self).__init__()
@@ -138,6 +158,7 @@ class UNet(nn.Module):
 
     def forward(self, x):
         _, _, h, w = x.shape
+        # Spatial attention rescales features; the direction gate broadcasts over channels.
         x1 = self.inc(x)
         x1_att = self.MorphoAttention1(x1) * self.dcm1(x1)
         x2 = self.down1(x1_att)
@@ -147,6 +168,7 @@ class UNet(nn.Module):
         x4 = self.down3(x3_att)
         x4_att = self.MorphoAttention4(x4)
         x5 = self.down4(x4_att)
+        # Decoder context gates each encoder feature map before skip concatenation.
         x4_gated = self.gate1(gate=x5, input=x4_att)
         x = self.up1(x5, x4_gated)
         x3_gated = self.gate2(gate=x, input=x3_att)
@@ -156,9 +178,11 @@ class UNet(nn.Module):
         x1_gated = self.gate4(gate=x, input=x1_att)
         x = self.up4(x, x1_gated)
         logits = self.outc(x)
+        # The training loss consumes these probabilities without a second sigmoid.
         output = self.sigmoid(logits)
         return output
 
 def unet(n_channels, n_classes=1, bilinear=True):
+    """Construct the architecture while retaining the established parameter names."""
     model = UNet(n_channels, n_classes, bilinear)
     return model

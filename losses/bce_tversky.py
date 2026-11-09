@@ -5,6 +5,11 @@ from torch.nn import functional as F
 
 
 class BCETverskyLoss(nn.Module):
+    """Combine pixel-mean BCE with the batch mean of per-image Tversky loss.
+
+    alpha weights false positives; beta weights false negatives. Inputs and
+    targets share shape (N,1,H,W), with binary targets and probability outputs.
+    """
     def __init__(self, alpha=0.7, beta=0.3, bce_weight=0.5, tversky_weight=0.5, smooth=1e-6):
         super().__init__()
         if min(alpha, beta, bce_weight, tversky_weight) < 0 or smooth <= 0 or bce_weight + tversky_weight <= 0:
@@ -18,7 +23,9 @@ class BCETverskyLoss(nn.Module):
             raise ValueError('Loss inputs must be finite.')
         if torch.any((probabilities < 0) | (probabilities > 1)) or torch.any((target != 0) & (target != 1)):
             raise ValueError('Expected probabilities in [0,1] and binary targets.')
+        # The model already applies sigmoid; a logits-based loss would apply it again.
         bce = F.binary_cross_entropy(probabilities, target)
+        # Preserve the batch axis so large foreground tiles do not dominate Tversky.
         dims = (1, 2, 3)
         tp = (probabilities * target).sum(dims)
         fp = (probabilities * (1-target)).sum(dims)

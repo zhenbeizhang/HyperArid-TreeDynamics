@@ -2,7 +2,7 @@
 
 ## Model and numerical contract
 
-`models/unet.py` preserves the model source used by the prior public inference package, byte for byte. The `tree_dynamics.model` module now re-exports that implementation for compatibility. Parameter names, attention modules, sigmoid output and five-channel architecture are unchanged.
+`models/unet.py` preserves the executable model definition used by the prior public inference package. Comments and docstrings are maintained in English; executable syntax, parameter names and numerical operations are unchanged. The `tree_dynamics.model` module now re-exports that implementation for compatibility. Parameter names, attention modules, sigmoid output and five-channel architecture are unchanged.
 
 Images are explicitly reordered to red/green/blue/NIR, converted to float32, extended with `(NIR-red)/(NIR+red+1e-6)`, and normalized using the existing `Normalize` implementation. This normalization is retained for compatibility: NDVI normalization bounds are derived from values in [0,1), without clipping all resulting NDVI values to [0,1]. Training and prediction call the same preprocessing function.
 
@@ -31,7 +31,7 @@ Only training rows receive online augmentation. Geometry is applied jointly to i
 
 ## Repetition and resume
 
-The recipe uses seed + epoch for Python, NumPy and PyTorch, a seeded shuffle generator, no worker subprocesses and deterministic PyTorch algorithms. Epoch-boundary checkpoints include optimizer state and all resolved settings. Resume verifies input and source hashes and uses the same device type and run folder. Interrupted partial epochs are rerun from the last completed epoch. Exact agreement is checked on the tested CPU environment; software or hardware changes can alter numerical results.
+The recipe uses seed + epoch for Python, NumPy and PyTorch, a seeded shuffle generator, no worker subprocesses and deterministic PyTorch algorithms. Epoch-boundary checkpoints include optimizer state and all resolved settings. Resume verifies input and source hashes and uses the same device type and run folder. Source hashes include comments and docstrings; resume an existing run with its original code commit, even when a later commit changes documentation only. Interrupted partial epochs are rerun from the last completed epoch. Exact agreement is checked on the tested CPU environment; software or hardware changes can alter numerical results.
 
 For a planned two-epoch run interrupted after one epoch:
 

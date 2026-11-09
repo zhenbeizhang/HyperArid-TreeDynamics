@@ -18,6 +18,7 @@ def digest(path):
 
 
 def read_manifest(path):
+    """Read explicit sample membership; group_id identifies a shared source group."""
     with Path(path).open(encoding='utf-8-sig', newline='') as f:
         reader = csv.DictReader(f)
         required = {'sample_id', 'image_file', 'mask_file', 'group_id'}
@@ -32,6 +33,7 @@ def read_manifest(path):
 
 
 def resolve_file(root, relative):
+    """Resolve a manifest path while keeping access inside the dataset root."""
     root = Path(root).resolve()
     path = (root / relative).resolve()
     if not path.is_relative_to(root) or not path.is_file():
@@ -45,6 +47,7 @@ def check_bands(bands):
 
 
 def read_image(path, bands):
+    """Return float32 RGB/NIR in CHW order and the original GeoTIFF profile."""
     check_bands(bands)
     with rasterio.open(path) as src:
         if src.count != 4 or (src.height, src.width) not in [(256, 256), (512, 512)]:
@@ -61,6 +64,7 @@ def read_image(path, bands):
 
 
 def read_pair(root, row, bands):
+    """Read an aligned pair; convert supported binary labels to float32 zero/one."""
     image, profile = read_image(resolve_file(root, row['image_file']), bands)
     with rasterio.open(resolve_file(root, row['mask_file'])) as src:
         if src.count != 1 or src.shape != image.shape[1:] or src.crs != profile['crs'] or not src.transform.almost_equals(profile['transform'], precision=1e-7):
@@ -76,6 +80,7 @@ def read_pair(root, row, bands):
 def preprocess(raw):
     """Same channel normalization and NDVI convention as the supplied model."""
     b = raw.astype(np.float32, copy=True)
+    # Append NDVI before normalization, using the explicitly reordered red and NIR.
     ndvi = (b[3] - b[0]) / (b[3] + b[0] + 1e-6)
     image = Normalize()(torch.from_numpy(np.concatenate([b, ndvi[None]])))
     if not torch.isfinite(image).all():
@@ -92,6 +97,7 @@ def validate_splits(root, manifests, bands):
         for row in read_manifest(path):
             image, _ = read_pair(root, row, bands)
             shapes.add(image.shape[1:])
+            # Decoded-pixel hashes also catch identical imagery saved with different metadata.
             pixel_hash = hashlib.sha256(image.tobytes()).hexdigest()
             keys = {'sample': row['sample_id'], 'group': row['group_id'],
                     'file': str(resolve_file(root, row['image_file'])), 'pixels': pixel_hash}
@@ -99,6 +105,7 @@ def validate_splits(root, manifests, bands):
                 keys['parent'] = row['parent_id']
             for kind, key in keys.items():
                 previous = owners[kind].get(key)
+                # Groups/parents may repeat within a split; sample identities may not.
                 if previous is not None and (previous != split or kind in ['sample', 'file', 'pixels']):
                     raise ValueError(f'{kind} duplication or cross-split overlap in {split}: {row["sample_id"]}')
                 owners[kind][key] = split
@@ -111,6 +118,11 @@ def validate_splits(root, manifests, bands):
 
 
 class TreeDataset(Dataset):
+    """Yield image tensors (5,H,W) and binary target tensors (1,H,W).
+
+    Pass augmentation only for the training set; validation and test loading
+    use the same deterministic preprocessing as prediction.
+    """
     def __init__(self, root, manifest, bands, augmentation=None):
         check_bands(bands)
         self.root, self.rows, self.bands = Path(root), read_manifest(manifest), bands

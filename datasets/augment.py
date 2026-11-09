@@ -4,6 +4,7 @@ from torchvision.transforms import ColorJitter
 
 
 class Augment:
+    """Apply shared geometry to image and mask, then perturb RGB features only."""
     def __init__(self, config):
         self.config = config
         self.jitter = ColorJitter(brightness=config['brightness'], contrast=config['contrast'],
@@ -15,6 +16,7 @@ class Augment:
             image, mask = image.flip(-1), mask.flip(-1)
         if torch.rand(()).item() < c['vflip_probability']:
             image, mask = image.flip(-2), mask.flip(-2)
+        # Right-angle rotations preserve the pixel grid and binary mask labels.
         if c['rotate90']:
             k = int(torch.randint(4, ()).item())
             image, mask = image.rot90(k, [-2, -1]), mask.rot90(k, [-2, -1])

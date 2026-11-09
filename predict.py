@@ -24,12 +24,14 @@ def main():
     model, saved = load_checkpoint(a.checkpoint, device)
     cfg = saved['config']
     seed_all(cfg['seed'],cfg['threads'])
+    # A new sensor's stored order may differ; an explicit override maps it to RGB/NIR.
     bands = a.bands if a.bands is not None else cfg['bands']
     raw, profile = read_image(a.input, bands)
     with torch.inference_mode():
         probability = model(preprocess(raw)[None].to(device))[0,0].cpu().numpy()
     mask = (probability > cfg['threshold']).astype(np.uint8)*255
     a.output.parent.mkdir(parents=True,exist_ok=True)
+    # Write a fresh one-band profile while preserving the input georeferencing.
     with rasterio.open(a.output,'w',driver='GTiff',height=mask.shape[0],width=mask.shape[1],count=1,dtype='uint8',
                        crs=profile['crs'],transform=profile['transform'],compress='deflate') as dst:
         dst.write(mask,1)

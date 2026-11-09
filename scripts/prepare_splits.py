@@ -27,10 +27,12 @@ def main():
         p.error('Missing groups or duplicate sample identifiers.')
     groups=sorted({r[a.group_column] for r in rows})
     if len(groups)<3:p.error('At least three groups are required.')
+    # Shuffle source groups, not individual tiles, before assigning split membership.
     random.Random(a.seed).shuffle(groups)
     nv=max(1,round(len(groups)*a.val_fraction));nt=max(1,round(len(groups)*a.test_fraction))
     if nv+nt>=len(groups):p.error('Fractions leave no training groups.')
     assignment={g:('val' if i<nv else 'test' if i<nv+nt else 'train') for i,g in enumerate(groups)}
+    # Check that a parent image is not split through inconsistent source identifiers.
     if 'parent_id' in fields:
         owner={}
         for row in rows:
