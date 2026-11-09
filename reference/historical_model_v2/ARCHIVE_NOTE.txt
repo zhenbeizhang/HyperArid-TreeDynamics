@@ -1,0 +1,3 @@
+Historical source archive: reference implementation, not the supported training entry point of this release.
+
+These files preserve Zenodo record 18170005 (v2) source and documentation byte for byte, excluding generated caches. See ../../docs/HISTORICAL_CODE_NOTES.md before using them. The independent validation entry has a return-value mismatch; the model-output/loss interface also requires review before any new training. The released revision inference entry is ../../tree_dynamics/inference.py with the bound checkpoint under ../../models. Historical source is retained for provenance and has not been silently repaired or used to retrain the model.

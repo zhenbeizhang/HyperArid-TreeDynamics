@@ -1,0 +1,24 @@
+[
+  {
+    "version": "v1",
+    "record": "17772938",
+    "url": "https://zenodo.org/records/17772938",
+    "archive_md5": "624d4bcc115dc83c3da61380e28a9f37",
+    "archive_sha256": "afe26dded41b871e89e63a06e21e11f1194ab81b0a0f148f399a893e16eac39f",
+    "original_file_count": 4,
+    "python_files": 4,
+    "copied_source_and_docs": 4,
+    "record_license": "CC-BY-4.0"
+  },
+  {
+    "version": "v2",
+    "record": "18170005",
+    "url": "https://zenodo.org/records/18170005",
+    "archive_md5": "7e7e9eb6625e5ea588961c97f63fade6",
+    "archive_sha256": "5db474699e7cfdd1459e2536c5e9cf5f6415c341df7593964dfd425420f76ec3",
+    "original_file_count": 41,
+    "python_files": 11,
+    "copied_source_and_docs": 14,
+    "record_license": "CC-BY-4.0"
+  }
+]

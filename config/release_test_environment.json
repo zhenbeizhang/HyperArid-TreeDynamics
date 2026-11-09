@@ -1,0 +1,27 @@
+{
+  "tested_date": "2026-11-09",
+  "operating_system": "Windows",
+  "statistics": {
+    "Python": "3.12.7",
+    "NumPy": "1.26.4",
+    "SciPy": "1.13.1"
+  },
+  "inference": {
+    "Python": "3.12.7",
+    "NumPy": "2.4.6",
+    "PyTorch": "2.7.1+cu128",
+    "device": "CPU",
+    "threads": 4,
+    "rasterio": "1.4.3"
+  },
+  "plotting": {
+    "Python": "3.12.7",
+    "NumPy": "1.26.4",
+    "matplotlib": "3.9.2",
+    "Pillow": "10.4.0",
+    "tested_date": "2026-11-07"
+  },
+  "fresh_install_tested": false,
+  "hardware_note": "Checks used an existing workstation; no GPU is needed for the supported statistical or tile-inference commands. No minimum RAM benchmark was established.",
+  "scope": "Existing-environment checks: derived-input statistical reproduction, synthetic NumPy and GeoTIFF inference, explicit channel mapping, spatial-grid preservation, mask metrics and sample-index integrity. No new training or regional accuracy experiment."
+}

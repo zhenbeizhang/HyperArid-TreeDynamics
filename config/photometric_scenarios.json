@@ -1,0 +1,51 @@
+{
+  "scenarios": [
+    [
+      "base",
+      "base",
+      1.0
+    ],
+    [
+      "gain080",
+      "gain",
+      0.8
+    ],
+    [
+      "gain120",
+      "gain",
+      1.2
+    ],
+    [
+      "offset002",
+      "offset",
+      0.02
+    ],
+    [
+      "offset005",
+      "offset",
+      0.05
+    ],
+    [
+      "nir090",
+      "nir",
+      0.9
+    ],
+    [
+      "nir110",
+      "nir",
+      1.1
+    ],
+    [
+      "gamma080",
+      "gamma",
+      0.8
+    ],
+    [
+      "gamma120",
+      "gamma",
+      1.2
+    ]
+  ],
+  "application": "Apply to the full 512-pixel four-band input before selecting a window, recomputing NDVI and normalization. Preserve all-band-zero pixels.",
+  "interpretation": "Prespecified bounded sensitivity transformations; amplitudes are not instrument error estimates, probability distributions, radiometric correction or shadow simulation."
+}

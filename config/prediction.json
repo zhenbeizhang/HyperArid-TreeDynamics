@@ -1,0 +1,25 @@
+{
+  "channels": [
+    "red",
+    "green",
+    "blue",
+    "near_infrared",
+    "NDVI"
+  ],
+  "ndvi_formula": "(NIR-red)/(NIR+red+1e-6)",
+  "threshold": 0.5,
+  "comparison": "strictly greater",
+  "inference_dtype": "float32",
+  "primary_window_pixels": 512,
+  "sensitivity_window_pixels": 256,
+  "evaluation_center_pixels": 200,
+  "pixel_size_m": 0.5,
+  "connectivity": 4,
+  "minimum_object_area_m2": 3,
+  "maximum_object_area_exclusive_m2": 200,
+  "mode": "eval",
+  "mixed_precision": false,
+  "scope": "Configuration used for the revision evaluations; not certification of historical regional inference settings",
+  "source_checkpoint_sha256": "2ea3adbbe544f10e9672401e25642f8f0212c9a31a7c5d61c59ade055ce2eb0d",
+  "input_band_mapping": "The channel names specify model input semantics, not authenticated physical names of stored public-sample TIFF bands. GeoTIFF commands require explicit 1-based indices."
+}

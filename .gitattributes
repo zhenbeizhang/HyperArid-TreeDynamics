@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Preserve release bytes for the SHA-256 file manifest across platforms.
+* -text

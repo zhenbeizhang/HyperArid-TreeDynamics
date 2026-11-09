@@ -1,0 +1,19 @@
+# Deep Learning
+torch==2.7.1
+torchvision==0.22.1
+
+# Numerical computation
+numpy>=1.26
+scipy>=1.13
+
+# Image processing
+opencv-python>=4.8
+pillow>=10.0
+scikit-image>=0.22
+
+# Geospatial data
+gdal>=3.8
+rasterio>=1.3
+
+# Utilities
+tqdm>=4.65

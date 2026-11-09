@@ -1,0 +1,1574 @@
+[
+  {
+    "case_id": "01_change_density_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__01_change_density_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "01_change_density_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__01_change_density_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "02_change_cover_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__02_change_cover_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "02_change_cover_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__02_change_cover_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "03_early_density_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__03_early_density_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "03_early_density_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__03_early_density_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "04_late_density_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__04_late_density_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "04_late_density_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__04_late_density_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "05_early_cover_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__05_early_cover_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "05_early_cover_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__05_early_cover_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "06_late_cover_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__06_late_cover_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "06_late_cover_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__06_late_cover_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "07_early_mean_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__07_early_mean_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "07_early_mean_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__07_early_mean_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "08_late_mean_primary_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__08_late_mean_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "08_late_mean_primary_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__08_late_mean_primary_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km",
+      "sensitivity_50km_buffer50km",
+      "sensitivity_25km_buffer10km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete",
+    "variant": "primary",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "09_change_density_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__09_change_density_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "09_change_density_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__09_change_density_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "10_change_cover_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__10_change_cover_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "10_change_cover_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__10_change_cover_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "11_early_density_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__11_early_density_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "11_early_density_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__11_early_density_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "12_late_density_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__12_late_density_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "12_late_density_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__12_late_density_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "13_early_cover_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__13_early_cover_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "13_early_cover_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__13_early_cover_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "14_late_cover_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__14_late_cover_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "14_late_cover_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__14_late_cover_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "15_early_mean_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__15_early_mean_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "15_early_mean_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__15_early_mean_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "16_late_mean_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__16_late_mean_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "16_late_mean_scope_climate_complete_exclude_planted30",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__16_late_mean_scope_climate_complete_exclude_planted30.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete_exclude_planted30",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "17_change_density_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__17_change_density_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "17_change_density_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__17_change_density_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "18_change_cover_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__18_change_cover_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "18_change_cover_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__18_change_cover_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "19_early_density_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__19_early_density_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "19_early_density_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__19_early_density_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "20_late_density_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__20_late_density_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "20_late_density_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__20_late_density_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "21_early_cover_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__21_early_cover_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "21_early_cover_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__21_early_cover_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "22_late_cover_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__22_late_cover_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "22_late_cover_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__22_late_cover_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "23_early_mean_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__23_early_mean_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "23_early_mean_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__23_early_mean_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "24_late_mean_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__24_late_mean_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "24_late_mean_scope_climate_complete_Hansen_full_land",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__24_late_mean_scope_climate_complete_Hansen_full_land.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete_Hansen_full_land",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "25_change_density_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__25_change_density_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "25_change_density_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__25_change_density_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "26_change_cover_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__26_change_cover_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "26_change_cover_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__26_change_cover_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "27_early_density_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__27_early_density_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "27_early_density_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__27_early_density_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "28_late_density_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__28_late_density_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "28_late_density_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__28_late_density_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "29_early_cover_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__29_early_cover_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "29_early_cover_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__29_early_cover_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "30_late_cover_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__30_late_cover_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "30_late_cover_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__30_late_cover_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "31_early_mean_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__31_early_mean_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "31_early_mean_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__31_early_mean_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "32_late_mean_scope_climate_complete_both",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__32_late_mean_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "32_late_mean_scope_climate_complete_both",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__32_late_mean_scope_climate_complete_both.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete_both",
+    "variant": "scope",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "33_change_density_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__33_change_density_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "33_change_density_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__33_change_density_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "34_change_cover_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__34_change_cover_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "34_change_cover_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__34_change_cover_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "trend"
+  },
+  {
+    "case_id": "35_early_density_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__35_early_density_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "35_early_density_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__35_early_density_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_density",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "36_late_density_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__36_late_density_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "36_late_density_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__36_late_density_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_density",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "37_early_cover_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__37_early_cover_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "37_early_cover_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__37_early_cover_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_cover",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "38_late_cover_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__38_late_cover_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "38_late_cover_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__38_late_cover_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_cover",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "39_early_mean_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__39_early_mean_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "39_early_mean_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__39_early_mean_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "40_late_mean_equal_weights_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__40_late_mean_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "40_late_mean_equal_weights_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__40_late_mean_equal_weights_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete",
+    "variant": "equal_weights",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "41_change_density_period_difference_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__41_change_density_period_difference_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete",
+    "variant": "period_difference",
+    "predictor_definition": "late_minus_early"
+  },
+  {
+    "case_id": "41_change_density_period_difference_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__41_change_density_period_difference_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_density",
+    "scope": "climate_complete",
+    "variant": "period_difference",
+    "predictor_definition": "late_minus_early"
+  },
+  {
+    "case_id": "42_change_cover_period_difference_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__42_change_cover_period_difference_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete",
+    "variant": "period_difference",
+    "predictor_definition": "late_minus_early"
+  },
+  {
+    "case_id": "42_change_cover_period_difference_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__42_change_cover_period_difference_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "change_cover",
+    "scope": "climate_complete",
+    "variant": "period_difference",
+    "predictor_definition": "late_minus_early"
+  },
+  {
+    "case_id": "43_early_mean_all_positive_mean_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__43_early_mean_all_positive_mean_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete",
+    "variant": "all_positive_mean",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "43_early_mean_all_positive_mean_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__43_early_mean_all_positive_mean_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "early_mean",
+    "scope": "climate_complete",
+    "variant": "all_positive_mean",
+    "predictor_definition": "early"
+  },
+  {
+    "case_id": "44_late_mean_all_positive_mean_climate_complete",
+    "model": "terraclimate_three_predictors",
+    "file": "terraclimate_three_predictors__44_late_mean_all_positive_mean_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete",
+    "variant": "all_positive_mean",
+    "predictor_definition": "late"
+  },
+  {
+    "case_id": "44_late_mean_all_positive_mean_climate_complete",
+    "model": "terraclimate_four_predictors",
+    "file": "terraclimate_four_predictors__44_late_mean_all_positive_mean_climate_complete.npz",
+    "variables": [
+      "PPT",
+      "Tmax",
+      "PET",
+      "VPD"
+    ],
+    "schemes": [
+      "main_50km_buffer25km"
+    ],
+    "response": "late_mean",
+    "scope": "climate_complete",
+    "variant": "all_positive_mean",
+    "predictor_definition": "late"
+  }
+]

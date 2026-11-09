@@ -1,0 +1,10 @@
+{
+  "layout_revision": "2026-11-09",
+  "code_host": "GitHub",
+  "data_manifest_sha256": "78eefc09bba240e34ad9f6302dd778ef4365162e16fd36ad53fd4368a500811b",
+  "code_archived_on_zenodo": false,
+  "model_weights_host": "GitHub Releases",
+  "sample_data_host": "Zenodo",
+  "analysis_inputs_file": "Supplementary_source_data.zip",
+  "analysis_inputs_scope": "Optional manuscript-derived inputs; distinct from the 956-pair sample dataset."
+}
