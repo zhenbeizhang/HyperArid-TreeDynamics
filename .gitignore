@@ -4,8 +4,6 @@ __pycache__/
 outputs/
 figures/
 /data/
-/models/*
-!/models/README.txt
 /Hyperarid_tree_crown_samples/
 /data_manifest.json
 /DATA_README.md
@@ -16,3 +14,7 @@ figures/
 *.npy
 *.tif
 *.tiff
+
+/runs/
+/splits/
+/data_local/

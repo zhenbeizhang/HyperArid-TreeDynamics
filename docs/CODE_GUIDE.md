@@ -1,11 +1,7 @@
-# Model and analysis guide
+# Code guide
 
-The main entry point is `python -m tree_dynamics`. Model tasks are `predict`, `predict-tif` and `evaluate-masks`; integrity checking is `verify-files`. Run `--help` for arguments. The model architecture and numerical preprocessing are retained with their released checkpoint.
+For model training, begin with train.py and config/train.json. The full architecture is in models/unet.py; datasets/ contains image-mask loading and augmentation; losses/ defines the probability-input BCE/Tversky loss; training/ provides checkpoint and metric helpers. evaluate.py scores the reserved test manifest, and predict.py applies the new checkpoints to GeoTIFF tiles.
 
-Training and augmentation source from the earlier public v2 archive is in `reference/historical_model_v2/`. Its original Python files are retained; the published training examples have compatibility issues described in `HISTORICAL_CODE_NOTES.md`. They do not identify the exact historical training membership or establish a new retraining workflow.
+The training source and original architecture under reference/historical_model_v2 remain unchanged. docs/TRAINING.md distinguishes the executable recipe from the historical source. The tree_dynamics/model.py compatibility module imports the shared models/unet.py definition, retaining older checkpoint-bound inference commands.
 
-Photometric transforms are in `tree_dynamics/photometric.py`, with scenarios in `config/photometric_scenarios.json`. They operate on supplied arrays; the complete imagery-based sensitivity experiment also requires source inputs and evaluation windows.
-
-Optional statistics, climate fitting and plot reconstruction are documented in `../analysis/README.txt`. Their scope is listed in `../analysis/analysis_scope.csv`. They are independent of downloading the Zenodo sample collection and do not need to be run before model prediction.
-
-GitHub hosts code and the separate weight release asset. Zenodo hosts the 956-pair sample dataset. Publication source tables and derived numerical inputs are separate from that sample collection.
+Optional manuscript statistics and plots are described in analysis/README.txt. They are not prerequisites for training or prediction. The public sample collection has a separate Zenodo release path; weights and code are not placed inside that sample archive.

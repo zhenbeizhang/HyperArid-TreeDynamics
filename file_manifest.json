@@ -6,8 +6,8 @@
   },
   {
     "file": ".gitignore",
-    "bytes": 222,
-    "sha256": "a281ae7eada68d8c93363ea27589c75de9f216a37b691b7832b78e79fc1e720f"
+    "bytes": 224,
+    "sha256": "6a089020a39ed0267d56558aa34bdcedd4d9c52152234b5a4f37ebbfc0f053f7"
   },
   {
     "file": "analysis/analysis_scope.csv",
@@ -61,18 +61,38 @@
   },
   {
     "file": "config/release_test_environment.json",
-    "bytes": 972,
-    "sha256": "b3f722ae63eb5541f096245895fe78137a00c2c99a46848f93affb75167d71ad"
+    "bytes": 1300,
+    "sha256": "549ebe691869dcb4f1dc1ce9aac504760b132b53336190890cc1249705e542fd"
+  },
+  {
+    "file": "config/train.json",
+    "bytes": 534,
+    "sha256": "61e051ac70c293b1a4ca54f7dd2f2b57f2d7c37fdf46201353d49c15469c4655"
+  },
+  {
+    "file": "datasets/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "datasets/augment.py",
+    "bytes": 1117,
+    "sha256": "c92f1b20d6ff3f1071b70c63673fc9153ca0397c1ccda090c71e671714ef7c37"
+  },
+  {
+    "file": "datasets/tree_dataset.py",
+    "bytes": 5746,
+    "sha256": "adde1795c0f1d851c5651eb9d1afdd7e7d13768eb78d394df0c30244d5d760ce"
   },
   {
     "file": "docs/CODE_GUIDE.md",
-    "bytes": 1396,
-    "sha256": "ea01f8cfc9ab4a9de8dfc58debe876c971a3d484cd836f051a727edc1653db4a"
+    "bytes": 987,
+    "sha256": "c3886d8c8fd2e9033f25672a4b3ce00d4abb12271c72bc88cd90ee45353c222c"
   },
   {
     "file": "docs/HISTORICAL_CODE_NOTES.md",
-    "bytes": 2540,
-    "sha256": "8f48f2c85ee164badd7bff9b865753839f75ce62d2a4068767a965ca7430ba92"
+    "bytes": 2734,
+    "sha256": "83cbeb15f89e9e1cc5e4bdf86cce4724908591bc24b2870b18c78ec777b6c280"
   },
   {
     "file": "docs/INPUTS_AND_WEIGHTS.md",
@@ -81,13 +101,23 @@
   },
   {
     "file": "docs/INSTALL_AND_DEMO.md",
-    "bytes": 2208,
-    "sha256": "12e07988d8d30e08983b68e440b14a8a6dd6cc2455a0994c38b388491b82d5f8"
+    "bytes": 1124,
+    "sha256": "4f7156ddaca90d31e207832e7d0e01d6597a41d266d4c0656c67a64e260b2c90"
+  },
+  {
+    "file": "docs/TRAINING.md",
+    "bytes": 5250,
+    "sha256": "35b0507aa43a761f84957d90edf584ca8f99ffab8f75be6683659eb6abdd61c4"
   },
   {
     "file": "docs/VALIDATION.md",
-    "bytes": 2355,
-    "sha256": "20a3c50fb882dd66552411100484b531e2278ed8620ef699785d0bc85f409907"
+    "bytes": 3310,
+    "sha256": "78e40e2e0a662e77ea8ad0df98960246cd6b15abe12e335d8edee8f82687280f"
+  },
+  {
+    "file": "evaluate.py",
+    "bytes": 1760,
+    "sha256": "45ce8ae2869c9bc11f9e22a3646de3e3dbd563e7fc1b89cf330ce5d51d363386"
   },
   {
     "file": "LICENSE.txt",
@@ -95,14 +125,39 @@
     "sha256": "009ecec6671e97480c9f740c8376eb4c0514ed2da6444b35ed8f4d2622fe7169"
   },
   {
+    "file": "losses/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "losses/bce_tversky.py",
+    "bytes": 1494,
+    "sha256": "861129b1d9f10f939a91fc3c5e58fbbc722eb178a35d79d3cf24868a88f3fe7d"
+  },
+  {
+    "file": "models/__init__.py",
+    "bytes": 30,
+    "sha256": "4cca573fa21c95478cd1c17d2b5913cce1663abb9003765e4bbe2a74c02a86b2"
+  },
+  {
     "file": "models/README.txt",
-    "bytes": 200,
-    "sha256": "cdc98a10a2af85a12919584d0bd6743f300b724dec4913b73d11789d21f20a59"
+    "bytes": 649,
+    "sha256": "d9d042607fd1ee480fa932ec45bbf0028073848e01a7a59a406d5badb0a612ab"
+  },
+  {
+    "file": "models/unet.py",
+    "bytes": 7670,
+    "sha256": "d3fde408eb6488d1ed2c716f5432337d4fbe553347fa61e77aee2b7dae6a2a85"
+  },
+  {
+    "file": "predict.py",
+    "bytes": 2134,
+    "sha256": "fa74472c430153d7cc36239f71b43d7a8025a2c6594aa3613613b746ebe1c076"
   },
   {
     "file": "README.md",
-    "bytes": 5338,
-    "sha256": "35b67ab53811cfdedaeba0a78f56ec9ae34e45adaa79e5a54d2cbf2d09960419"
+    "bytes": 7850,
+    "sha256": "efb1b34fd7832e246f6da33fd5b81deb41a4866617dd399e1be1b30d8d3f1ec3"
   },
   {
     "file": "reference/historical_model_v2/ARCHIVE_NOTE.txt",
@@ -205,6 +260,16 @@
     "sha256": "519a07374e3f246c7e869c92d5d7dd0704f0da267563d98e6fc0bd6fefe32dd9"
   },
   {
+    "file": "requirements-training-tested.txt",
+    "bytes": 235,
+    "sha256": "89d5ae279e9736fd9f21ae213536371e29de256802cd7acab1f4875e2be1e009"
+  },
+  {
+    "file": "requirements-training.txt",
+    "bytes": 64,
+    "sha256": "e433eb725a7ac8f34f96a843c4430c3ea98d424bd5c7579687cccca653a3cbf0"
+  },
+  {
     "file": "requirements.txt",
     "bytes": 32,
     "sha256": "3db45b6727e00fae75ce1f38fcf572afa339215925255947f2102602bf8deb5e"
@@ -228,6 +293,41 @@
     "file": "scripts/demo_inference.py",
     "bytes": 1893,
     "sha256": "abfc8d9bb7b7954ccf675cb5309e6766e7788fe09ab5980e0cc963da4d9d865a"
+  },
+  {
+    "file": "scripts/prepare_splits.py",
+    "bytes": 3084,
+    "sha256": "9590e8e41cb5387f1e4c441f04758eb267ce7f2ecc320809ef72b81450a5d6ad"
+  },
+  {
+    "file": "scripts/smoke_training.py",
+    "bytes": 4470,
+    "sha256": "7fbd519bacd14840671580bb8548c48a83af0a71310ce394b6c6b70ee08712a8"
+  },
+  {
+    "file": "tests/test_pipeline.py",
+    "bytes": 3716,
+    "sha256": "22d482fdb00551e234bbe70643b1ce25fa155e8b2e7c880beb165e6c6ed60f09"
+  },
+  {
+    "file": "train.py",
+    "bytes": 7300,
+    "sha256": "8de8ee84d3a9b4dce9a0742f01c53afe18a04c4bf4591c1fa1193dcbc4e620ae"
+  },
+  {
+    "file": "training/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "training/common.py",
+    "bytes": 2599,
+    "sha256": "2be7d84c06d1b0e9cdb02a90b50750271b7e893d644d21b0318d4de01274f7c3"
+  },
+  {
+    "file": "training/metrics.py",
+    "bytes": 646,
+    "sha256": "1d053621c036c8242a29b2eb5e5862ffa362297fe878b32b295a7c532c642d8d"
   },
   {
     "file": "tree_dynamics/__init__.py",
@@ -266,8 +366,8 @@
   },
   {
     "file": "tree_dynamics/model.py",
-    "bytes": 7670,
-    "sha256": "d3fde408eb6488d1ed2c716f5432337d4fbe553347fa61e77aee2b7dae6a2a85"
+    "bytes": 99,
+    "sha256": "c8b8209ee3f36c0cc77b51cda6c4e4119685c17c389d44f945553885118989f2"
   },
   {
     "file": "tree_dynamics/object_metrics.py",

@@ -1,0 +1,7 @@
+# Versions used for the CPU training workflow tests on Windows / Python 3.12.7.
+# Installed PyTorch/TorchVision builds included CUDA 12.8; tests used the CPU.
+numpy==2.4.6
+scipy==1.15.3
+torch==2.7.1
+torchvision==0.22.1
+rasterio==1.4.3

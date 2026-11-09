@@ -19,3 +19,9 @@ The numerical checks operate on supplied derived inputs. Synthetic examples test
 The tensor-only export retains all 346 parameter and buffer entries from its bound checkpoint. Its portability checks included matching the two stored binary masks on an existing development anchor. These are implementation checks, not new independent reference data. Current software versions are recorded in config/release_test_environment.json. Historical source compatibility is described in docs/HISTORICAL_CODE_NOTES.md.
 
 Model input/output checks verify a known four-band permutation, agreement of GeoTIFF and NumPy predictions, CRS/grid preservation, known pixel and object confusion counts, and rejection of invalid or misaligned inputs. The sample-index validator checks the 956-pair collection and optional checksums.
+
+## Training workflow checks
+
+The root-level training recipe was exercised on four synthetic 256-pixel GeoTIFF pairs in the recorded CPU environment. Two-epoch training, a repeated run, an interrupted/resumed run, held-out pixel evaluation and checkpoint-based GeoTIFF prediction completed. Model parameter tensors and histories matched exactly between repeated and resumed runs. A known-value loss/gradient test, mask-alignment rejection, group-separation rejection, paired augmentation and metric-count tests passed. The unchanged architecture strictly loaded all 346 entries of the earlier weight and produced the same output as the previous module.
+
+These checks validate the training software, not the historical model's training provenance or tree-detection accuracy. The expanded sample metadata can be split reproducibly by source group, but its physical spectral order still requires independent documentation before actual model training.

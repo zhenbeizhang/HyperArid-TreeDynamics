@@ -13,3 +13,5 @@ Source: https://zenodo.org/records/18170005 (v2), archive MD5 `7e7e9eb6625e5ea58
 A strict parameter load of the supplied state dictionary into the old five-channel architecture has been verified. Parameter compatibility alone does not establish identity of training, preprocessing or full-image prediction settings. Current revision commands retain the checkpoint-bound architecture and preprocessing.
 
 The original archive is available at its persistent public record. Fixing its training loss would define a changed training implementation, so this release does not substitute a new loss and claim that it generated the existing checkpoint.
+
+The executable training recipe is now provided by root-level train.py. Its explicit corrections and configuration choices are documented in TRAINING.md; the archive itself remains unchanged.
