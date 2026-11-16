@@ -11,4 +11,4 @@ python scripts/smoke_training.py --output runs/smoke
 
 No external imagery or pretrained checkpoint is required. The smoke example creates synthetic four-band tiles with a known stored red/green/blue/NIR order and binary masks. It checks training, repeated seeds, resume, saved-checkpoint loading, held-out evaluation and GeoTIFF prediction. These checks are software checks and do not provide an ecological accuracy estimate.
 
-Earlier command-line tasks under python -m tree_dynamics remain available. Those requiring the earlier released checkpoint or optional analysis archive retain their documented requirements. New training starts from random initialization and does not require either artifact.
+Earlier command-line tasks under python -m tree_dynamics remain available. Those requiring the earlier checkpoint supplied with the manuscript or optional analysis archive retain their documented requirements. New training starts from random initialization and does not require either artifact.

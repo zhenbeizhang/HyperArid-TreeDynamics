@@ -2,7 +2,7 @@ Optional manuscript analyses
 
 These commands reproduce derived-input statistics and figures. They are separate from model prediction and from the 956-pair Zenodo sample collection.
 
-Input: Supplementary_source_data.zip accompanying the manuscript materials. Extract the contents of its inner tree_dynamics directory into the repository root to provide data/, data_manifest.json and accompanying data documentation. The original archive also includes the same released weight; its identity is checked if used. This is a compatibility input format, not the current destination for downloading model weights.
+Input: Supplementary_source_data.zip accompanying the manuscript materials. Extract the contents of its inner tree_dynamics directory into the repository root to provide data/, data_manifest.json and accompanying data documentation. The archive also includes models/canopy_state_dict.pt; its identity is checked if used. The archive accompanies the submission and is separate from the public sample dataset. A public checkpoint download is not currently provided.
 
 Run from the repository root:
 python -m pip install -r requirements.txt

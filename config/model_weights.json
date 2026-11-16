@@ -2,7 +2,7 @@
   "filename": "canopy_state_dict.pt",
   "bytes": 71779147,
   "sha256": "db7f8583d6e8026c08130c107a3050f6009defc4c8a4793fe05212f76220746a",
-  "repository_location": "GitHub Releases asset",
+  "repository_location": "Supplied with the manuscript: Supplementary_source_data.zip/tree_dynamics/models/canopy_state_dict.pt",
   "install_path": "models/canopy_state_dict.pt",
   "format": "PyTorch tensor-only state dictionary",
   "architecture": "tree_dynamics/model.py: unet(n_channels=5)",

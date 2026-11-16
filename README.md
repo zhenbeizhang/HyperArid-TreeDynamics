@@ -102,7 +102,7 @@ The example creates four synthetic GeoTIFF pairs, performs two short training ep
 
 ## Earlier model and analyses
 
-The earlier tensor-only checkpoint is separate from the checkpoints produced by `train.py`. Its planned distribution is through GitHub Releases; no download is required for the training workflow above. The older `python -m tree_dynamics predict` command requires that particular checkpoint and verifies its identity.
+The earlier tensor-only checkpoint is separate from the checkpoints produced by `train.py`. It is supplied to reviewers in `Supplementary_source_data.zip`, at `tree_dynamics/models/canopy_state_dict.pt`; a public checkpoint download is not currently provided. No checkpoint download is required for the training workflow above. The older `python -m tree_dynamics predict` command requires that particular checkpoint and verifies its identity.
 
 The earlier public source is retained in `reference/historical_model_v2/`. Its compatibility issues and the changes in the runnable recipe are documented in [training notes](docs/TRAINING.md). Optional statistics and plotting remain in [analysis/README.txt](analysis/README.txt).
 

@@ -1,8 +1,8 @@
-# Model inputs and released weights
+# Model inputs and checkpoint access
 
 ## Weight file
 
-Download `canopy_state_dict.pt` from GitHub Releases to `models/`. It is a tensor-only state dictionary with 346 entries, loaded on CPU with `weights_only=True` and strict parameter matching. Its SHA-256 is checked before model loading. Use `--weights PATH` if the released file is stored elsewhere; the same identity check applies. This option relocates the released checkpoint rather than silently substituting a different model.
+The manuscript source-data archive supplies `tree_dynamics/models/canopy_state_dict.pt`. Copy it to `models/` in the repository root, or use its extracted path with `--weights PATH`. This archive accompanies the submission; no public checkpoint download is currently provided. The new training workflow does not require this file. It is a tensor-only state dictionary with 346 entries, loaded on CPU with `weights_only=True` and strict parameter matching. Its SHA-256 is checked before model loading. Use `--weights PATH` if the supplied file is stored elsewhere; the same identity check applies. This option relocates the specified checkpoint rather than silently substituting a different model.
 
 ## Array contract
 

@@ -16,8 +16,8 @@
   },
   {
     "file": "analysis/README.txt",
-    "bytes": 1699,
-    "sha256": "92a4d4462e7abd2c0d7821b015f5d2ddfd07526bc2b3395aaed8cf4395e2ea9e"
+    "bytes": 1739,
+    "sha256": "60712c814b274300add5b90fbcfcd384ac6b5ac8f408daccfb65ca4ddf113904"
   },
   {
     "file": "analysis/scripts/replot_figure4.py",
@@ -36,8 +36,8 @@
   },
   {
     "file": "config/artifact_binding.json",
-    "bytes": 444,
-    "sha256": "3e72adf7b01f3ca90c50a0a85529e517212df4ecc2ae2ad944f956dbeeec5fe6"
+    "bytes": 480,
+    "sha256": "2ac464dc988da6fa8d61c3f50d575bce3f5b1a0af8a855fa3a18152d8c58a16d"
   },
   {
     "file": "config/climate_cases.json",
@@ -46,8 +46,8 @@
   },
   {
     "file": "config/model_weights.json",
-    "bytes": 410,
-    "sha256": "e8ec75c1c6884d398fca9783511ceccfa29480686743144a4f73cdc8af487edc"
+    "bytes": 480,
+    "sha256": "f60023d8d3e4a6653b8aa8ae1eb01474c71f95907e8e49cab0f672cd22f24294"
   },
   {
     "file": "config/photometric_scenarios.json",
@@ -96,13 +96,13 @@
   },
   {
     "file": "docs/INPUTS_AND_WEIGHTS.md",
-    "bytes": 2361,
-    "sha256": "91720664d636d502d11906b81dc71d8a3d1716e83d5cb8bddcf2117fcc7218df"
+    "bytes": 2627,
+    "sha256": "6df19770b255c28f3ca5f14d88e3d386b07f0afdb6dcf7a40c625b0fd938fe50"
   },
   {
     "file": "docs/INSTALL_AND_DEMO.md",
-    "bytes": 1124,
-    "sha256": "4f7156ddaca90d31e207832e7d0e01d6597a41d266d4c0656c67a64e260b2c90"
+    "bytes": 1144,
+    "sha256": "133d0c1409d682e784053f9a3877cbf22383b5803ba727f75d3f7304f71b5703"
   },
   {
     "file": "docs/TRAINING.md",
@@ -156,8 +156,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 7850,
-    "sha256": "efb1b34fd7832e246f6da33fd5b81deb41a4866617dd399e1be1b30d8d3f1ec3"
+    "bytes": 7976,
+    "sha256": "2cc3d90444a4703bbbf41e38b21d533a7b550585826a00c14a4de84efce51caf"
   },
   {
     "file": "reference/historical_model_v2/ARCHIVE_NOTE.txt",
@@ -336,8 +336,8 @@
   },
   {
     "file": "tree_dynamics/__main__.py",
-    "bytes": 5157,
-    "sha256": "bee277f431da2e476f72fa9d094e5a61027ae15b06fabf633a5aa2535ed8e972"
+    "bytes": 5184,
+    "sha256": "55ced357e971477f580843a6c8d87485241a6a8aeb9c78a71ac6c0158b6ec724"
   },
   {
     "file": "tree_dynamics/climate.py",
@@ -356,8 +356,8 @@
   },
   {
     "file": "tree_dynamics/integrity.py",
-    "bytes": 1655,
-    "sha256": "d6cfdd64b9da05590d98b2d93983a0632c8de4ad845054eb93009c07b28aac25"
+    "bytes": 1765,
+    "sha256": "541aa011fae752b538aa3e2822c2a4aa5a57eacfb51ce64f0cc82bcc39f0d933"
   },
   {
     "file": "tree_dynamics/io.py",

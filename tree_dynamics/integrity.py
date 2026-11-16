@@ -1,4 +1,4 @@
-"""Checksums for the released model and optional derived-data archive."""
+"""Checksums for the specified model and optional derived-data archive."""
 from pathlib import Path
 import hashlib
 import json
@@ -18,7 +18,7 @@ def verify_weights(path=None):
     path = Path(path) if path is not None else ROOT / 'models/canopy_state_dict.pt'
     spec = json.loads((ROOT / 'config/model_weights.json').read_text(encoding='utf-8'))
     if not path.is_file():
-        raise FileNotFoundError('Download canopy_state_dict.pt from GitHub Releases and place it in models/, or supply --weights PATH.')
+        raise FileNotFoundError('Copy canopy_state_dict.pt from Supplementary_source_data.zip (tree_dynamics/models/) into models/, or supply --weights PATH. No public checkpoint download is currently provided; train.py can train from scratch.')
     if path.stat().st_size != spec['bytes'] or file_sha256(path) != spec['sha256']:
         raise ValueError('Model checksum mismatch: use the weight file associated with this code release.')
     return path
