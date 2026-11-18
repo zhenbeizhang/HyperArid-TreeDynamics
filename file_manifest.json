@@ -36,8 +36,8 @@
   },
   {
     "file": "config/artifact_binding.json",
-    "bytes": 480,
-    "sha256": "2ac464dc988da6fa8d61c3f50d575bce3f5b1a0af8a855fa3a18152d8c58a16d"
+    "bytes": 481,
+    "sha256": "f6834533f1252a1752e1ee0bd097bae5a7784ef0c896ba8507f29535850d916f"
   },
   {
     "file": "config/climate_cases.json",
@@ -61,8 +61,8 @@
   },
   {
     "file": "config/release_test_environment.json",
-    "bytes": 1300,
-    "sha256": "549ebe691869dcb4f1dc1ce9aac504760b132b53336190890cc1249705e542fd"
+    "bytes": 4267,
+    "sha256": "3972050f7c62d552f6a8aa7acbfd15b6ac74f1df8295201f85dbb596f3288b7f"
   },
   {
     "file": "config/train.json",
@@ -156,8 +156,8 @@
   },
   {
     "file": "README.md",
-    "bytes": 7976,
-    "sha256": "2cc3d90444a4703bbbf41e38b21d533a7b550585826a00c14a4de84efce51caf"
+    "bytes": 8374,
+    "sha256": "88613f6b32b824d72e1d8657b0c5fac647dd867aa03b14708ec2ba1928cbd91b"
   },
   {
     "file": "reference/historical_model_v2/ARCHIVE_NOTE.txt",
@@ -261,8 +261,8 @@
   },
   {
     "file": "requirements-training-tested.txt",
-    "bytes": 235,
-    "sha256": "89d5ae279e9736fd9f21ae213536371e29de256802cd7acab1f4875e2be1e009"
+    "bytes": 507,
+    "sha256": "0eab7bb49eafbe3bc9a052149d7179613ba1334e5683b35fdf87b18c400af14d"
   },
   {
     "file": "requirements-training.txt",

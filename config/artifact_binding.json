@@ -1,7 +1,7 @@
 {
   "layout_revision": "2026-11-16",
   "code_host": "GitHub",
-  "data_manifest_sha256": "361feb9dba7fa32b50840caab6bfbacde36fcc6bcb539372e703db7f916e8b57",
+  "data_manifest_sha256": "fa68eecd903f68da76f33b3e2849686eed514c242865fd1a8518c616729b7b5d",
   "code_archived_on_zenodo": false,
   "model_weights_host": "Manuscript source-data archive (not a public GitHub Release)",
   "sample_data_host": "Zenodo",

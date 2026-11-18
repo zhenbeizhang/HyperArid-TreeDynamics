@@ -32,7 +32,7 @@ Use Python 3.10+ and run commands from the repository root:
 python -m pip install -r requirements-training.txt
 ```
 
-The exercised environment is Windows, Python 3.12.7, PyTorch 2.7.1, TorchVision 0.22.1 and Rasterio 1.4.3. Exact package versions are in `requirements-training-tested.txt`. The training test uses CPU; a fresh installation and GPU execution have not been tested.
+Fresh installations in two isolated Windows virtual environments were tested with Python 3.12.7. The CPU model workflow used PyTorch 2.7.1, TorchVision 0.22.1, NumPy 2.4.6, SciPy 1.15.3 and Rasterio 1.4.3; its complete dependency pins are in `requirements-training-tested.txt`. Statistical reproduction used NumPy 1.26.4 and SciPy 1.13.1 (`requirements-statistics-tested.txt`). Checks covered repeated training, epoch-boundary resume, evaluation, prediction, spatial-grid preservation and the supplied derived-input analyses. GPU execution and a fresh operating-system installation were not tested. These are software checks; the synthetic training examples are not ecological accuracy measurements. See `config/release_test_environment.json` for the verification scope.
 
 ## 2. Prepare images and labels
 

@@ -1,18 +1,20 @@
 {
-  "tested_date": "2026-11-09",
+  "tested_date": "2026-11-18",
   "operating_system": "Windows",
   "statistics": {
     "Python": "3.12.7",
     "NumPy": "1.26.4",
-    "SciPy": "1.13.1"
+    "SciPy": "1.13.1",
+    "fresh_install_tested": true
   },
   "inference": {
     "Python": "3.12.7",
     "NumPy": "2.4.6",
-    "PyTorch": "2.7.1+cu128",
+    "PyTorch": "2.7.1",
     "device": "CPU",
     "threads": 4,
-    "rasterio": "1.4.3"
+    "rasterio": "1.4.3",
+    "fresh_install_tested": true
   },
   "plotting": {
     "Python": "3.12.7",
@@ -21,17 +23,117 @@
     "Pillow": "10.4.0",
     "tested_date": "2026-11-07"
   },
-  "fresh_install_tested": false,
-  "hardware_note": "Checks used an existing workstation; no GPU is needed for the supported statistical or tile-inference commands. No minimum RAM benchmark was established.",
-  "scope": "Existing-environment checks: derived-input statistical reproduction, synthetic NumPy and GeoTIFF inference, explicit channel mapping, spatial-grid preservation, mask metrics and sample-index integrity. No new training or regional accuracy experiment.",
+  "fresh_install_tested": true,
+  "hardware_note": "CPU execution with four threads; no minimum-memory benchmark established.",
+  "scope": "Derived-input numerical reproduction; synthetic training, repetition and epoch-boundary resume; GeoTIFF prediction and mask contracts; archived-checkpoint synthetic I/O. No historical training replay or new ecological accuracy assessment.",
   "training_recipe": {
     "Python": "3.12.7",
-    "PyTorch": "2.7.1+cu128",
-    "TorchVision": "0.22.1+cu128",
+    "PyTorch": "2.7.1",
+    "TorchVision": "0.22.1",
     "NumPy": "2.4.6",
     "rasterio": "1.4.3",
     "device": "CPU",
-    "fresh_install_tested": false,
+    "fresh_install_tested": true,
     "scope": "Synthetic training workflow, not original historical training or ecological accuracy"
+  },
+  "previous_workstation_check": {
+    "tested_date": "2026-11-09",
+    "inference": {
+      "Python": "3.12.7",
+      "NumPy": "2.4.6",
+      "PyTorch": "2.7.1",
+      "device": "CPU",
+      "threads": 4,
+      "rasterio": "1.4.3",
+      "fresh_install_tested": true
+    },
+    "training_recipe": {
+      "Python": "3.12.7",
+      "PyTorch": "2.7.1",
+      "TorchVision": "0.22.1",
+      "NumPy": "2.4.6",
+      "rasterio": "1.4.3",
+      "device": "CPU",
+      "fresh_install_tested": true,
+      "scope": "Synthetic training workflow, not original historical training or ecological accuracy"
+    }
+  },
+  "fresh_install_scope": "Two Python virtual environments with system and user site packages disabled, on the existing Windows workstation; not a new operating system or GPU test.",
+  "fresh_environment_packages": {
+    "statistics": {
+      "numpy": "1.26.4",
+      "pip": "24.2",
+      "scipy": "1.13.1"
+    },
+    "model": {
+      "affine": "3.0.1",
+      "attrs": "26.1.0",
+      "certifi": "2026.10.23",
+      "click": "8.5.1",
+      "click-plugins": "1.1.1.2",
+      "cligj": "0.7.2",
+      "filelock": "4.2.12",
+      "fsspec": "2026.9.0",
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.4",
+      "mpmath": "1.3.0",
+      "networkx": "3.7",
+      "numpy": "2.4.6",
+      "pillow": "13.0.0",
+      "pip": "24.2",
+      "pyparsing": "3.3.3",
+      "rasterio": "1.4.3",
+      "scipy": "1.15.3",
+      "setuptools": "84.2.1",
+      "sympy": "1.14.0",
+      "torch": "2.7.1",
+      "torchvision": "0.22.1",
+      "typing_extensions": "4.16.0"
+    }
+  },
+  "verification_results": {
+    "statistical_reproduction": {
+      "validation": {
+        "matched_saved_results": true,
+        "values_checked": 13440
+      },
+      "summaries": {
+        "reference_count": 6221,
+        "predicted_count": 6294,
+        "reference_area_m2": 107589.25,
+        "predicted_area_m2": 100791.25,
+        "six_exclusion_scenarios_arithmetic_verified": true
+      },
+      "climate": {
+        "model_case_combinations": 88,
+        "coefficient_rows": 308,
+        "validation_rows": 240,
+        "numerical_values_checked": 5068,
+        "matched_saved_results": true,
+        "relative_tolerance": 1e-07,
+        "absolute_tolerance": 1e-08,
+        "scope": "Fits, block intervals and held-out prediction metrics from prepared units; not raw climate-grid processing or detection uncertainty"
+      }
+    },
+    "synthetic_training": {
+      "passed": true,
+      "steps": [
+        "split",
+        "train_full",
+        "train_repeat",
+        "train_pause",
+        "train_resume",
+        "evaluate",
+        "predict"
+      ],
+      "parameter_update_verified": true,
+      "repeated_run_tensor_equal": true,
+      "resumed_run_tensor_equal": true,
+      "prediction_equals_direct_model": true,
+      "scope": "Synthetic CPU pipeline test; not ecological accuracy or reproduction of historical training results."
+    },
+    "pipeline_unit_tests_passed": 4,
+    "archived_checkpoint_io_passed": true,
+    "source_manifests_passed": true
   }
 }
